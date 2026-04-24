@@ -21,50 +21,113 @@ canvasWidth: 1280
 <div class="cover-wrap">
   <img src="/img/01_uumami_cover.png" class="bg" onerror="this.style.display='none'" />
   <div class="grid-bg"></div>
-  <div class="handle-big">uumami</div>
-  <div class="cursor">▊</div>
+  <MatrixRain />
+  <div class="status-bar">
+    <span class="dot-live"></span>
+    <span>wired</span>
+    <span class="sep">//</span>
+    <span>present.day</span>
+    <span class="sep">//</span>
+    <span>online</span>
+  </div>
+  <div class="handle-big">
+    <span class="u">u</span><span class="u">u</span><span class="u">m</span><span class="u">a</span><span class="u">m</span><span class="u">i</span><span class="cursor">▊</span>
+  </div>
   <div class="sub"><Slashes :items="['present time', 'present day']" /></div>
+  <div class="glyph tl">人</div>
+  <div class="glyph tr">線</div>
+  <div class="glyph bl">繋</div>
+  <div class="glyph br">net</div>
   <div class="scan"></div>
+  <div class="vignette"></div>
 </div>
 
 <style>
 .cover-wrap {
   position: absolute; inset: 0;
-  background: radial-gradient(ellipse at 70% 30%, rgba(127,255,181,0.08), transparent 55%),
-              radial-gradient(ellipse at 20% 80%, rgba(255,46,195,0.06), transparent 50%),
-              #0b0f0d;
+  background:
+    radial-gradient(ellipse at 70% 30%, rgba(127,255,181,0.08), transparent 55%),
+    radial-gradient(ellipse at 20% 80%, rgba(255,46,195,0.06), transparent 50%),
+    #0b0f0d;
   overflow: hidden;
 }
 .cover-wrap .bg {
   position: absolute; inset: 0; width: 100%; height: 100%;
-  object-fit: cover; opacity: 0.88; z-index: 1;
+  object-fit: cover; opacity: 0.75; z-index: 1;
 }
 .cover-wrap .grid-bg {
-  position: absolute; inset: 0; z-index: 0;
+  position: absolute; inset: 0; z-index: 2;
   background-image:
-    linear-gradient(rgba(127,255,181,0.06) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(127,255,181,0.06) 1px, transparent 1px);
+    linear-gradient(rgba(127,255,181,0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(127,255,181,0.08) 1px, transparent 1px);
   background-size: 80px 80px;
   mask-image: radial-gradient(ellipse at 50% 60%, black 10%, transparent 75%);
-}
-.cover-wrap::after {
-  content: ''; position: absolute; inset: 0; z-index: 2;
-  background: linear-gradient(180deg, rgba(11,15,13,0.1) 0%, rgba(11,15,13,0.55) 100%);
   pointer-events: none;
 }
+.cover-wrap > .matrix-rain {
+  z-index: 3; opacity: 0.35; mix-blend-mode: screen;
+}
+.vignette {
+  position: absolute; inset: 0; z-index: 6; pointer-events: none;
+  background:
+    radial-gradient(ellipse at 50% 50%, transparent 35%, rgba(11,15,13,0.6) 100%),
+    linear-gradient(180deg, rgba(11,15,13,0.2) 0%, rgba(11,15,13,0.45) 100%);
+}
+.status-bar {
+  position: absolute; top: 1.5rem; left: 2.5rem;
+  z-index: 8;
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--lain-fg);
+  letter-spacing: 0.15em;
+  display: flex; gap: 0.7rem; align-items: center;
+  opacity: 0.88;
+  text-transform: uppercase;
+}
+.dot-live {
+  width: 8px; height: 8px; border-radius: 999px;
+  background: var(--lain-fg);
+  box-shadow: 0 0 10px var(--lain-fg);
+  animation: pulse 1.4s ease-in-out infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.4; transform: scale(0.7); }
+}
+.status-bar .sep { opacity: 0.35; }
 .handle-big {
   position: absolute; top: 50%; left: 50%;
-  transform: translate(-50%, -60%);
+  transform: translate(-50%, -50%);
   font-family: var(--font-mono); font-size: 7rem; font-weight: 300;
-  color: var(--lain-fg); letter-spacing: 0.12em; z-index: 5;
-  text-shadow: 0 0 30px rgba(127,255,181,0.5), 0 0 80px rgba(127,255,181,0.25);
+  color: var(--lain-fg); letter-spacing: 0.12em; z-index: 7;
   line-height: 1;
+  display: flex; align-items: center;
 }
-.cursor {
-  position: absolute; top: 50%; left: 50%;
-  transform: translate(270%, -58%);
-  font-family: var(--font-mono); font-size: 7rem; color: var(--lain-fg);
-  z-index: 5; line-height: 1;
+.handle-big .u {
+  display: inline-block;
+  text-shadow:
+    0 0 20px rgba(127,255,181,0.6),
+    0 0 60px rgba(127,255,181,0.4),
+    0 0 3px rgba(46,245,255,0.8);
+  animation: flicker 6s infinite;
+}
+.handle-big .u:nth-child(2) { animation-delay: 0.3s; }
+.handle-big .u:nth-child(3) { animation-delay: 0.6s; }
+.handle-big .u:nth-child(4) { animation-delay: 0.9s; }
+.handle-big .u:nth-child(5) { animation-delay: 1.2s; }
+.handle-big .u:nth-child(6) { animation-delay: 1.5s; }
+@keyframes flicker {
+  0%, 100% { opacity: 1; }
+  33% { opacity: 1; }
+  34% { opacity: 0.65; }
+  36% { opacity: 1; }
+  50% { opacity: 1; }
+  51% { opacity: 0.85; }
+  52% { opacity: 1; }
+}
+.handle-big .cursor {
+  margin-left: 0.15em;
+  color: var(--lain-fg);
   animation: blink 1s steps(1) infinite;
 }
 @keyframes blink {
@@ -72,17 +135,30 @@ canvasWidth: 1280
   50%, 100% { opacity: 0; }
 }
 .cover-wrap .sub {
-  position: absolute; bottom: 3rem; left: 50%;
+  position: absolute; bottom: 2.5rem; left: 50%;
   transform: translateX(-50%);
-  z-index: 5;
+  z-index: 8;
   color: var(--lain-ink);
   font-family: var(--font-mono);
   font-size: 1.2rem;
   letter-spacing: 0.15em;
-  opacity: 0.75;
+  opacity: 0.8;
 }
+.glyph {
+  position: absolute;
+  z-index: 7;
+  font-family: var(--font-jp), var(--font-mono);
+  color: var(--lain-fg);
+  opacity: 0.5;
+  font-size: 1.3rem;
+  letter-spacing: 0.1em;
+}
+.glyph.tl { top: 1.5rem; right: 2.5rem; }
+.glyph.tr { top: 40%; right: 2.5rem; font-size: 2.2rem; opacity: 0.18; }
+.glyph.bl { bottom: 2rem; left: 2.5rem; font-size: 1.1rem; opacity: 0.6; }
+.glyph.br { bottom: 2rem; right: 2.5rem; font-size: 0.8rem; opacity: 0.5; letter-spacing: 0.3em; }
 .scan {
-  position: absolute; inset: 0; z-index: 4; pointer-events: none;
+  position: absolute; inset: 0; z-index: 9; pointer-events: none;
   background: repeating-linear-gradient(
     0deg,
     rgba(0,0,0,0.22) 0px,
