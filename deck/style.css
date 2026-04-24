@@ -1,0 +1,305 @@
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800&family=Cinzel:wght@500;600;700&family=Shippori+Mincho:wght@500;700&display=swap');
+
+/* ============================================================
+   uumami theme — paletas + tipografía + capas gráficas
+   ============================================================ */
+
+/* ============================================================
+   KILL SWITCH: all Slidev overlay panels that can block the slide
+   - #page-root side editor (triggered by 'e' key, persisted in localStorage)
+   - #slidev-goto-dialog (triggered by 'g' key)
+   - .slidev-overview / QuickOverview (triggered by 'o' key) — kept, user might want grid
+   ============================================================ */
+#page-root {
+  grid-template-columns: 1fr !important;
+  grid-template-rows: 1fr !important;
+}
+#page-root > *:nth-child(n+2) {
+  display: none !important;
+}
+#slidev-goto-dialog {
+  display: none !important;
+}
+
+:root {
+  /* lain */
+  --lain-bg:      #0b0f0d;
+  --lain-fg:      #7fffb5;
+  --lain-ink:     #e8fff3;
+  --lain-dim:     #2a4a38;
+
+  /* eva */
+  --eva-bg:       #0a0511;
+  --eva-fg:       #ff3a2f;
+  --eva-amber:    #f7b500;
+  --eva-ink:      #f6e9e3;
+
+  /* frieren */
+  --frieren-bg:   #eef1f5;
+  --frieren-fg:   #5a6b8a;
+  --frieren-sil:  #c9d4e0;
+  --frieren-gold: #c9a159;
+  --frieren-ink:  #1a2030;
+
+  /* vinland */
+  --vinland-bg:   #14100c;
+  --vinland-fg:   #d7c7a3;
+  --vinland-red:  #8b2d2d;
+  --vinland-ink:  #f3ead6;
+
+  /* elden */
+  --elden-bg:     #1a1410;
+  --elden-fg:     #c9a159;
+  --elden-ink:    #e8d9b0;
+  --elden-dim:    #4a3a2a;
+
+  /* capas */
+  --vapor-mag:    #ff2ec3;
+  --vapor-cyan:   #2ef5ff;
+  --vapor-viol:   #a64dff;
+  --cyber-red:    #ff0044;
+  --cyber-cyan:   #00e5ff;
+  --cyber-amber:  #ff9f1c;
+  --solar-green:  #6ab04c;
+  --solar-gold:   #f7b500;
+  --solar-rust:   #c76e3a;
+
+  /* tipografías */
+  --font-mono:    'IBM Plex Mono', ui-monospace, monospace;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-display: 'Cinzel', serif;
+  --font-jp:      'Shippori Mincho', 'Noto Serif JP', serif;
+}
+
+/* ============================================================
+   slide base
+   ============================================================ */
+
+.slidev-layout {
+  background: var(--lain-bg);
+  color: var(--lain-ink);
+  font-family: var(--font-body);
+  padding: 2.5rem 3rem !important;
+}
+
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: var(--font-body);
+  font-weight: 300;
+  letter-spacing: -0.02em;
+  text-transform: lowercase;
+}
+
+.slidev-layout h1 {
+  font-size: 3.2rem;
+  line-height: 1.05;
+  margin: 0 0 1.25rem 0;
+  max-width: 90%;
+}
+
+.slidev-layout h2 {
+  font-size: 1.8rem;
+  opacity: 0.8;
+  font-weight: 300;
+}
+
+.slidev-layout h3 {
+  font-size: 1.3rem;
+  opacity: 0.8;
+}
+
+.slidev-layout code,
+.slidev-layout pre {
+  font-family: var(--font-mono);
+}
+
+.slidev-layout p,
+.slidev-layout li {
+  font-size: 1.05rem;
+  line-height: 1.5;
+  font-weight: 300;
+}
+
+/* slashes / meta line */
+.slashes {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  opacity: 0.6;
+  letter-spacing: 0.08em;
+}
+
+/* ============================================================
+   layout-specific palettes — aplicadas vía `class:` en slides
+   ============================================================ */
+
+.slidev-layout.theme-lain {
+  background: var(--lain-bg);
+  color: var(--lain-ink);
+}
+.slidev-layout.theme-lain h1 { color: var(--lain-fg); text-shadow: 0 0 20px rgba(127,255,181,0.35); }
+
+.slidev-layout.theme-eva {
+  background: var(--eva-bg);
+  color: var(--eva-ink);
+}
+.slidev-layout.theme-eva h1 { color: var(--eva-fg); }
+.slidev-layout.theme-eva h2 { color: var(--eva-amber); }
+
+.slidev-layout.theme-frieren {
+  background: var(--frieren-bg);
+  color: var(--frieren-ink);
+}
+.slidev-layout.theme-frieren h1 {
+  color: var(--frieren-ink);
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+.slidev-layout.theme-frieren h2 { color: var(--frieren-fg); }
+
+.slidev-layout.theme-vinland {
+  background: var(--vinland-bg);
+  color: var(--vinland-ink);
+}
+.slidev-layout.theme-vinland h1 {
+  color: var(--vinland-fg);
+  font-family: var(--font-display);
+  font-weight: 500;
+}
+
+.slidev-layout.theme-elden {
+  background: var(--elden-bg);
+  color: var(--elden-ink);
+}
+.slidev-layout.theme-elden h1 {
+  color: var(--elden-fg);
+  font-family: var(--font-display);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  text-shadow: 0 0 30px rgba(201,161,89,0.3);
+}
+
+/* ============================================================
+   capa graphic: vaporwave / cyberpunk / solarpunk
+   (aplican gradient overlays sobre la paleta)
+   ============================================================ */
+
+.slidev-layout.layer-vaporwave::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    linear-gradient(180deg, transparent 0%, transparent 70%, rgba(255,46,195,0.10) 90%, rgba(46,245,255,0.08) 100%),
+    linear-gradient(0deg, rgba(166,77,255,0.04), transparent 50%);
+}
+.slidev-layout.layer-cyberpunk::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 20% 110%, rgba(0,229,255,0.10), transparent 60%),
+    radial-gradient(ellipse at 90% 0%, rgba(255,0,68,0.06), transparent 50%);
+}
+.slidev-layout.layer-solarpunk::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse at 80% 100%, rgba(106,176,76,0.10), transparent 60%),
+    radial-gradient(ellipse at 15% 20%, rgba(247,181,0,0.06), transparent 55%);
+}
+.slidev-layout > * { position: relative; z-index: 1; }
+
+/* ============================================================
+   avatar — esquina inferior derecha
+   ============================================================ */
+
+.avatar-floating {
+  position: absolute;
+  right: 2rem;
+  bottom: 2rem;
+  width: 180px;
+  height: 180px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255,255,255,0.15);
+  box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+  z-index: 10;
+}
+
+/* ============================================================
+   crt scanlines (se aplica con componente CrtFrame.vue)
+   ============================================================ */
+
+.crt-scanlines::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0,0,0,0.15) 0px,
+    rgba(0,0,0,0.15) 1px,
+    transparent 1px,
+    transparent 3px
+  );
+  pointer-events: none;
+  mix-blend-mode: multiply;
+  z-index: 100;
+}
+
+/* ============================================================
+   misc utilities
+   ============================================================ */
+
+.handle {
+  font-family: var(--font-mono);
+  font-weight: 400;
+  letter-spacing: 0.1em;
+  opacity: 0.85;
+}
+
+.kv {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  opacity: 0.75;
+}
+
+.kv .k { color: var(--lain-fg); }
+.theme-eva .kv .k { color: var(--eva-fg); }
+.theme-elden .kv .k { color: var(--elden-fg); }
+.theme-vinland .kv .k { color: var(--vinland-fg); }
+.theme-frieren .kv .k { color: var(--frieren-gold); }
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+.chip {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid currentColor;
+  border-radius: 999px;
+  opacity: 0.75;
+}
+
+.ascii {
+  font-family: var(--font-mono);
+  font-size: 0.9rem;
+  line-height: 1.25;
+  white-space: pre;
+  opacity: 0.85;
+}
+
+/* selección */
+::selection { background: var(--lain-fg); color: var(--lain-bg); }
+.theme-eva ::selection { background: var(--eva-fg); color: var(--eva-bg); }
+.theme-elden ::selection { background: var(--elden-fg); color: var(--elden-bg); }

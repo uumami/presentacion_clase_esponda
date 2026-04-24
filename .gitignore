@@ -137,6 +137,14 @@ celerybeat.pid
 # Environments
 .env
 .envrc
+
+# local / ide
+.claude/
+.cache/
+
+# source material (personal)
+*.pdf
+!deck/public/**/*.pdf
 .venv
 env/
 venv/

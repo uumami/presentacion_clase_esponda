@@ -1,0 +1,511 @@
+# ============================================================
+# PRESENTACIÓN ITAM — CLASE ESPONDA
+# Prompts de imagen para Gemini 3.1 Flash Image (Nano Banana)
+# Autor: uumami
+#
+# 4 PILARES core: Serial Experiments Lain, Ghost in the Shell,
+# Evangelion, Frieren.
+# Acentos: Chainsaw Man, Samurai Champloo, Vinland Saga, SnK,
+# One Piece, Elden Ring.
+# ============================================================
+#
+# Cómo usar:
+#   1. Exportar GEMINI_API_KEY o GOOGLE_API_KEY (o .env en raíz)
+#   2. python scripts/generate_images.py --skip-existing
+#   3. Imágenes aterrizan en deck/public/img/
+#
+# Modelo:         gemini-3.1-flash-image-preview
+# Aspect ratio:   16:9 escenas / 1:1 avatares
+# Formato salida: PNG
+# ============================================================
+
+
+## SLIDE 01 — cover uumami
+File:   img/01_uumami_cover.png
+Ancla:  Serial Experiments Lain × Ghost in the Shell × vaporwave
+Nota:   Full bleed, anime puro, shock inicial
+Prompt:
+---
+Anime key visual in the style of Serial Experiments Lain (1998) crossed
+with Ghost in the Shell (1995). A young figure with a short dark bob-cut
+sits faceless in front of a massive glowing CRT monitor in a dark
+bedroom, cables coiled across the floor. Phosphor-green text floats out
+of the screen in katakana and latin letters: "present time, present day".
+The monitor bleeds vaporwave magenta-and-cyan light onto the walls, a
+wireframe grid recedes beyond the window into a vaporwave sunset.
+Cel-shaded anime, flat colors, thick ink linework, heavy film grain
+absent, saturated neon. 16:9, leave space top-left empty for a handle.
+No rendered text in the image.
+---
+
+
+## SLIDE 02 — avatar base
+File:   img/avatar/base.png [SKIP]
+Ancla:  Frieren (Madhouse 2023)
+Nota:   MANUAL — sustituida por imagen del usuario (frieren_termial/5aa73cba...). No regenerar.
+Prompt:
+---
+Anime portrait in the style of Frieren: Beyond Journey's End (Madhouse,
+2023). Young man, short dark messy bob-cut covering part of the
+forehead, thick square black glasses, plain black t-shirt, calm neutral
+expression looking slightly off-camera. Soft pastel background of a
+leafy library window at golden hour. Cel-shaded, clean linework, muted
+palette, gentle ambient light. Bust shot, shoulders up, centered, 1:1
+square. No text.
+---
+
+
+## SLIDE 03 — qué hago
+File:   img/03_que_hago.png
+Ancla:  Ghost in the Shell × cyberpunk
+Nota:   Anime directo GITS, data flow puro
+Prompt:
+---
+Anime illustration in the style of Ghost in the Shell (1995, Mamoru
+Oshii). Major Motoko Kusanagi's silhouette from behind, thermo-optic
+camo shimmering over her body, standing in a rainy Hong Kong alley at
+night. Streams of green code and cyan data cascade from neon kanji
+signs down into fiber-optic cables that braid through the frame. Palette:
+deep teal, amber, phosphor green. Masamune Shirow art, thick inks,
+cel-shading, zero photorealism. 16:9, negative space on the right third.
+No rendered text.
+---
+
+
+## SLIDE 04 — trayectoria
+File:   img/04_trayectoria.png
+Ancla:  Vinland Saga × solarpunk
+Nota:   Árbol horizontal como timeline
+Prompt:
+---
+Anime illustration in the style of Vinland Saga (Wit Studio / MAPPA).
+A massive Nordic tree grows horizontally across a snowy cliff coast at
+dawn. Five thick branches fork outward left to right, each glowing a
+different warm metallic tone. Roots carved with faint runes. Soft green
+solarpunk moss creeps over black stones. Thorfinn-like muted palette:
+ivory, rust, iron, blood-red. Cel-shaded, thick linework, painted
+backgrounds. 16:9, horizon low. No text.
+---
+
+
+## SLIDE 05 — startups
+File:   img/05_startups.png
+Ancla:  One Piece × vaporwave
+Nota:   Flota pirata de startups
+Prompt:
+---
+Anime illustration in the style of One Piece (Eiichiro Oda, Toei). A
+fleet of five pirate ships sails across a vaporwave sea at sunset. Each
+ship flies a unique jolly-roger-like flag with abstract letterforms (no
+real logos). Sky split left-to-right: magenta-and-orange vaporwave sun
+on the left, cyan wireframe grid horizon on the right. Oda-style
+organic ink lines, saturated colors, flat cel-shading. 16:9, plenty of
+sky above the ships. No rendered text.
+---
+
+
+## SLIDE 06 — industria (díptico: muro + mapa)
+File:   img/06a_muro_industria.png
+File:   img/06b_mapa_mexico.png
+Ancla:  SnK / Ghost in the Shell × cyberpunk
+Nota:   Díptico. (a) muro brutalista SnK con racks, (b) mapa holo de méxico GITS
+Prompt 06a:
+---
+Anime illustration in the style of Shingeki no Kyojin (Wit Studio).
+A colossal brutalist concrete wall stretches into the teal stormy
+horizon. Cyberpunk server racks and fiber-optic cables embedded into
+the wall's base, pulsing red warning lights along the top. Tiny
+silhouetted figures in long coats walk at the foot of the wall with
+glowing laptops. Isayama-style detailed linework, flat cel-shaded
+colors, heavy atmosphere. 16:9. No text.
+---
+Prompt 06b:
+---
+Anime illustration in the style of Ghost in the Shell: Stand Alone
+Complex. Top-down holographic map of Mexico rendered on a tactical ops
+console: country outline in glowing cyan wireframe, major cities marked
+with pulsing red neon dots connected by amber data-flow arcs. Faint
+aztec glyph decorative chrome along edges. Deep navy background with
+subtle grid lines. Clean anime vector look, no photoreal textures.
+16:9. No text labels.
+---
+
+
+## SLIDE 07 — avatar research (Motoko Kusanagi)
+File:   img/avatar/research.png
+Ancla:  Ghost in the Shell (Oshii 1995 / Masamune Shirow)
+Nota:   Personaje: Major Motoko Kusanagi, no uumami
+Prompt:
+---
+Anime portrait bust in the style of Ghost in the Shell (1995, Mamoru
+Oshii / Masamune Shirow). Major Motoko Kusanagi — short violet-blue
+hair, pale skin, deep cyan eyes slightly narrowed in thought, matte
+black combat undersuit. Her head is tilted slightly, pensive. Around
+her, floating red AT-field hexagons and translucent geometric polytope
+runes glow in amber light. Background: dim cyberpunk server room,
+out-of-focus fiber-optic cables descending. Palette: teal, amber,
+cross-red, ink black. Shirow-style cel-shading, thick inks. 1:1
+square portrait, bust, centered. No rendered text.
+---
+
+
+## SLIDE 08 — mhar
+File:   img/08_mhar.png
+Ancla:  Evangelion × cyberpunk
+Nota:   Polytope como AT field explotando
+Prompt:
+---
+Anime illustration in the style of Neon Genesis Evangelion: End of
+Evangelion (Gainax, 1997). A blinding red cross of light explodes
+outward from the center of a translucent rotating geometric polytope
+(simplex shape) hovering above a Tokyo-III skyline at dusk. Thousands
+of tiny white dots swarm inside the polytope leaving glowing amber
+trails. AT-field hexagons refract in the background. Cel-shaded anime,
+religious-apocalyptic mood, palette: cross-red, amber, navy. 16:9.
+No rendered text.
+---
+
+
+## SLIDE 09 — avatar victory (Thorfinn)
+File:   img/avatar/victory.png
+Ancla:  Vinland Saga (Wit Studio / MAPPA) × Elden Ring solarpunk
+Nota:   Personaje: Thorfinn versión post-Farmland Saga, no uumami
+Prompt:
+---
+Anime portrait bust in the style of Vinland Saga (Wit Studio / MAPPA).
+Thorfinn in his Farmland Saga era — messy blond-brown hair, calm
+weathered face with scars on cheeks, warm determined gaze, simple
+linen tunic. One fist raised at chin level, subtle satisfied smile.
+Behind him a soft golden Elden Ring rune circle glows warmly. Ivy and
+small white flowers curl at the frame edges (solarpunk). Cel-shaded
+anime, muted earth tones with warm amber highlights. 1:1 square
+portrait, bust, centered. No rendered text.
+---
+
+
+## SLIDE 10 — nestlé (triple)
+File:   img/10a_maira.png
+File:   img/10b_amanda.png
+File:   img/10c_foodlens.png
+Ancla:  anime medical / still-life × solarpunk
+Nota:   Tres imágenes, se componen como tríptico
+Prompt 10a:
+---
+Anime illustration, cel-shaded. A young person's anime face with eyes
+closed peacefully is scanned by a softly glowing amber grid projected
+from an off-frame phone. Thin golden lines mark cheekbones and
+jawline. Background: a lush green vertical garden wall in solarpunk
+warm light. Clean linework, flat colors, no photoreal textures. Mood:
+clinical-serene. 16:9. No text.
+---
+Prompt 10b:
+---
+Anime illustration, cel-shaded. An open palm in the foreground holds
+a small glowing amber sigil that rises into a conversational speech-
+bubble shape made of light filaments. In the blurred background a
+hospital bed with clean white sheets, a ceramic pot of ferns, a tube-
+feeding IV stand, warm morning sun through a window. Optimistic
+solarpunk palette: teal, amber, soft green. Flat anime colors. 16:9.
+No text.
+---
+Prompt 10c:
+---
+Anime illustration, cel-shaded, top-down view. A wooden table with a
+plate of colorful healthy food (grilled fish, rice, vegetables, lime
+wedges). A translucent amber rune grid projected from above scans the
+plate. Ghost glyph readouts float around it (abstract, not real text).
+Terracotta tiles and small potted herbs at the frame edges, warm
+natural light. Flat colors, clean linework. 16:9. No rendered text.
+---
+
+
+## SLIDE 11 — vibe projects (triple)
+File:   img/11a_lain_shell.png
+File:   img/11b_raya_lucaria.png
+File:   img/11c_tycoon_points.png
+Ancla:  Lain / Elden Ring / Chainsaw Man
+Nota:   Tres imágenes con anclas distintas
+Prompt 11a:
+---
+Anime illustration in the style of Serial Experiments Lain (1998). Lain
+herself sits at a dark desk in front of a chunky CRT monitor showing
+phosphor-green abstract shell glyphs (no real text). Cables snake
+across the floor. Vaporwave magenta-and-cyan glow leaks from behind the
+monitor. Cel-shaded, muted palette with neon accents, thick ink
+linework. 16:9. No text.
+---
+Prompt 11b:
+---
+Anime illustration in the style of Made in Abyss / Elden Ring concept
+art. A fantasy magic academy courtyard inspired by Raya Lucaria at
+dusk: floating blue glintstone crystals hover over wooden desks covered
+in open books, quills, and a single glowing laptop. Ivy climbs the
+stone arches. Vaporwave magenta sky leaks through broken columns.
+Cel-shaded, warm candlelight palette. 16:9. No text.
+---
+Prompt 11c:
+---
+Anime illustration in the style of Chainsaw Man (MAPPA, Fujimoto). A
+chaotic trading floor at 4am: monitors glow magenta and cyan with
+candlestick charts, crumpled papers fly through the air, a single
+faceless figure in a black t-shirt types furiously at a desk. Stark
+shadows, red accents, loose expressive ink lines, Fujimoto-style
+dramatic composition. Cel-shaded, high-contrast. 16:9. No rendered text.
+---
+
+
+## SLIDE 12 — avatar teacher (Frieren)
+File:   img/avatar/teacher.png
+Ancla:  Frieren: Beyond Journey's End (Madhouse 2023)
+Nota:   Personaje: Frieren la maga, no uumami
+Prompt:
+---
+Anime portrait bust in the style of Frieren: Beyond Journey's End
+(Madhouse, 2023). Frieren herself — long silvery-white hair with
+braided sidelocks, pointed elf ears, pale green eyes with long
+eyelashes, calm soft teaching smile, wearing her signature white
+and gold mage robes. She holds a large open leather-bound grimoire
+at chest height, eyes down on the page. Three small symbolic glyphs
+float around her: a circuit-node, a data stream, a speech bubble.
+Background: warm library interior, stained-glass windows, golden
+afternoon dust motes. Muted pastel solarpunk palette. Cel-shaded,
+clean linework. 1:1 square portrait, bust, centered. No rendered text.
+---
+
+
+## SLIDE 13 — qué hace un ds real
+File:   img/13_ds_real.png
+Ancla:  Ghost in the Shell × cyberpunk
+Nota:   El trabajo real: diving into dirty data
+Prompt:
+---
+Anime illustration in the style of Ghost in the Shell: Stand Alone
+Complex. Major Motoko Kusanagi floats in a dark cyberspace, cables
+plugging into the back of her neck, her body surrounded by a vast
+tangled mess of broken, tangled, glitching data streams in red, amber
+and cyan. Shirow-style cel-shading, thick linework, no photoreal
+textures. Mood: the boring, ugly, sacred work of untangling. 16:9,
+negative space on the right. No text.
+---
+
+
+## SLIDE 14 — día típico
+File:   img/14_dia_tipico.png
+Ancla:  Samurai Champloo × solarpunk
+Nota:   Horizontal panoramic, 5 viñetas del día estilo Champloo
+Prompt:
+---
+Anime illustration in the style of Samurai Champloo (Watanabe). A
+horizontal panorama split into 5 stylized vignettes flowing left to
+right, separated by ink-splash brushwork transitions: (1) dawn coffee
+and an open laptop on a rooftop, (2) morning meeting as silhouettes
+around a table of holograms, (3) noon code-writing under an awning,
+(4) afternoon meditation with geometric glyphs floating above a
+cross-legged figure, (5) dusk with a glowing terminal window. Palette:
+ochre, rust, teal, jade. Hip-hop graffiti accents, cel-shading, loose
+ink linework. 16:9. No rendered text.
+---
+
+
+## SLIDE 15 — skills (class select)
+File:   img/15_class_select.png
+Ancla:  Elden Ring × vaporwave
+Nota:   Pantalla de selección de clase, anime, runas
+Prompt:
+---
+Anime illustration of an Elden Ring character-class selection screen,
+vaporwave-themed. Five silhouetted anime figures stand in a row against
+a split magenta-and-cyan gradient, each outlined in golden Elden Ring
+rune linework. Props suggesting roles: math-formula glyph, keyboard,
+open book, wrench, compass. Halo of runes above each. Vaporwave grid
+floor, magenta sun setting behind them. Cel-shaded, flat colors. 16:9.
+No rendered text.
+---
+
+
+## SLIDE 16 — consejo
+File:   img/16_consejo.png
+Ancla:  Evangelion × solarpunk
+Nota:   Post-battle, hopeful. End of Eva vibes pero mirando hacia adelante
+Prompt:
+---
+Anime illustration in the style of Evangelion: End of Evangelion final
+scene. A lone figure in a torn black plug-suit sits on the rim of a
+crater at dawn, helmet beside them, staring at a single green sprout
+pushing up through cracked red ground. A dormant ruined mecha leans in
+the distance. Sky: soft solarpunk gradient of peach, rose, pale green.
+Cel-shaded, muted, hopeful melancholy. 16:9, figure small to one side.
+No text.
+---
+
+
+## SLIDE 17 — contacto
+File:   img/17_contacto.png
+Ancla:  Serial Experiments Lain × cyberpunk
+Nota:   "everyone is connected" — Lain ending vibe
+Prompt:
+---
+Anime illustration in the style of Serial Experiments Lain's ending
+sequence. A vast dark cyberpunk city seen from above at night, threaded
+with a web of glowing cyan fiber-optic lines connecting every building
+like neural synapses. Above it, a translucent Lain-like figure with a
+short dark bob-cut floats faceless, arms slightly open, dissolving
+partially into the network. Deep navy palette, cyan glow, faint
+magenta puddle reflections. Cel-shaded, muted, haunting mood. 16:9.
+No rendered text.
+---
+
+
+## SLIDE NEW — papers & omics
+File:   img/12_papers_omics.png
+Ancla:  Evangelion × solarpunk
+Nota:   DNA helix + papers stacked, omics + longevidad
+Prompt:
+---
+Anime illustration in the style of Evangelion meets Made in Abyss.
+A translucent double helix of DNA rotates in mid-air, wrapped around
+a floating stack of academic papers. Behind it, a field of small
+green sprouts pushes through cracked black ground (solarpunk
+longevity). Thin red AT-field crosshairs mark specific base pairs.
+Palette: deep navy, amber, phosphor green, cross-red. Cel-shaded,
+thick inks, reverent scientific mood. 16:9, negative space on left
+for copy. No rendered text.
+---
+
+
+## SLIDE NEW — vinlandia / filosofía
+File:   img/vinlandia.png
+Ancla:  Vinland Saga × solarpunk
+Nota:   "a person from vinlandia. only true enemy is entropy." Anime.
+Prompt:
+---
+Anime illustration in the style of Vinland Saga (Wit Studio / MAPPA).
+Thorfinn-like silhouette stands on a snowy cliff at dawn facing a
+vast unknown horizon. Beside him, a single green sprout grows through
+cracked black stone (solarpunk). Above, a faint Buddhist enso circle
+hovers in the sky like a distant moon. Palette: ivory, iron, rust,
+pale green, Buddhist saffron. Cel-shaded, thick linework, painted
+snow textures. Philosophical mood — absurdist calm, not triumphant.
+16:9, horizon low, plenty of negative space for text. No rendered text.
+---
+
+
+## SLIDE NEW — misión (beat entropy, longevity, p vs np)
+File:   img/mision.png
+Ancla:  Evangelion × cosmic cyberpunk
+Nota:   Escala cósmica, no arrogante. Anime.
+Prompt:
+---
+Anime illustration in the style of Evangelion: End of Evangelion. A
+vast cosmic void studded with stars. In the foreground, a double helix
+of DNA rotates slowly, wrapped by thin red cross-shaped filaments of
+AT-field light. Further back, a mathematical equation hangs in the
+void rendered as abstract geometric glyphs (not real text). Far behind,
+a single gigantic sphere of golden light — the goal. Palette: deep
+navy, cross-red, amber, phosphor green. Eva-style cel-shading, religious
+quiet apocalyptic mood. Scale is overwhelming. 16:9. No rendered text.
+---
+
+
+## SLIDE NEW — roles
+File:   img/roles.png
+Ancla:  Ghost in the Shell × solarpunk
+Nota:   6 silhouettes, cada una un rol (ai architect, backender, ds, cto, cso, cdo)
+Prompt:
+---
+Anime illustration in the style of Ghost in the Shell: Stand Alone
+Complex. Six silhouetted anime figures stand in a row against a dark
+navy background, each outlined in thin cyan linework, each holding a
+symbolic prop that hints at a role: (1) a floating neural network
+diagram, (2) a cable/API plug, (3) a data chart, (4) a crown/helm,
+(5) a telescope, (6) a vault key. Above each figure a small floating
+caption-bubble in abstract glyphs (not real text). Warm solarpunk ivy
+creeps along the frame edges. Cel-shaded, flat, Shirow-style. 16:9.
+No rendered text.
+---
+
+
+## SLIDE NEW — causalidad
+File:   img/causalidad.png
+Ancla:  Ghost in the Shell × cyberpunk
+Nota:   DAG / grafo causal como red neuronal holográfica, GITS vibes
+Prompt:
+---
+Anime illustration in the style of Ghost in the Shell (Oshii, 1995).
+Major Motoko Kusanagi reaches out to touch a glowing holographic
+directed acyclic graph (DAG) that floats in mid-air in front of her.
+Nodes pulse cyan, directed arrows glow amber. One branch glows red —
+a confounder. Background: rainy neon Hong Kong alley, kanji signs
+blurred. Palette: deep teal, amber, cross-red warning, phosphor cyan.
+Cel-shaded, Shirow-style inks, thick linework. Mood: reverent,
+investigative. 16:9, negative space on the right. No rendered text.
+---
+
+
+## SLIDE NEW — chatbots
+File:   img/chatbots.png
+Ancla:  Ghost in the Shell × cyberpunk
+Nota:   Arquitectura de voz+texto, pipelines conversacionales
+Prompt:
+---
+Anime illustration in the style of Ghost in the Shell: Stand Alone
+Complex. A tachikoma-like small robot (or faceless anime silhouette)
+stands between two glowing speech-bubble holograms — one made of
+cyan waveform audio signals, one of amber text glyphs (abstract, not
+real text). Between them, a chain of small geometric boxes representing
+a pipeline: ASR → LLM → RAG → TTS, rendered as faint cyan schematic
+icons. Background: a dim server room with rackmount lights. Palette:
+teal, amber, cyan, ink black. Cel-shaded, flat colors. 16:9.
+No rendered text.
+---
+
+
+## SLIDE NEW — rag
+File:   img/rag.png
+Ancla:  Ghost in the Shell × cyberpunk
+Nota:   Vector space, embeddings, retrieval
+Prompt:
+---
+Anime illustration in the style of Ghost in the Shell (1995). Major
+Kusanagi floats in a cyan voxel-lattice representing a vector
+embedding space, reaching toward a cluster of glowing amber point-
+clouds (documents) that attract toward her fingertips. Thin white
+wireframe lines connect nearby points. Background dissolves into
+phosphor-green data streams. Palette: deep teal, amber, cyan grid,
+ink black. Shirow-style cel-shading, thick inks. 16:9, negative space
+bottom-right for copy. No rendered text.
+---
+
+
+## SLIDE NEW — agentic engineering
+File:   img/agentic.png
+Ancla:  Chainsaw Man × cyberpunk
+Nota:   Caos de agentes autónomos, high energy
+Prompt:
+---
+Anime illustration in the style of Chainsaw Man (MAPPA, Fujimoto).
+A chaotic operations center: five or six faceless agent-figures
+(small, quick-sketched with loose ink lines) dash in different
+directions across the frame, each leaving a glowing red trail that
+forks and loops. Central figure stands calmly at a console observing
+them. Papers and tools fly through the air in Fujimoto-style dynamic
+composition. Palette: ink black, red accents, cyan console glow.
+Cel-shaded, thick expressive inks, high contrast. 16:9. No rendered text.
+---
+
+
+## SLIDE NEW — harnesses / evals
+File:   img/harnesses.png
+Ancla:  Evangelion × cyberpunk
+Nota:   Grid de tests, pasa/falla. Eva's LCL tank vibes pero disciplinado
+Prompt:
+---
+Anime illustration in the style of Neon Genesis Evangelion's NERV
+control room. A massive wall of glowing monitors shows a grid of
+evaluation tests: most green check-marks, a few red X-marks, one
+amber warning. In the foreground, a solitary anime figure sits at a
+control console watching. Above, floating red AT-field hexagons
+frame the composition. Palette: deep navy, monitor green, red
+warning, amber caution. Eva-style cel-shading, religious ops-room
+austerity. 16:9. No rendered text.
+---
