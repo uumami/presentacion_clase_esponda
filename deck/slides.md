@@ -36,10 +36,9 @@ canvasWidth: 1280
   <div class="sub"><Slashes :items="['present time', 'present day']" /></div>
 
   <div class="qr-cover">
-    <QrcodeVue
+    <QrCode
       value="https://uumami.wiki/presentacion_clase_esponda/"
       :size="180"
-      level="H"
       background="#0b0f0d"
       foreground="#7fffb5"
     />
@@ -55,10 +54,6 @@ canvasWidth: 1280
   <div class="scan"></div>
   <div class="vignette"></div>
 </div>
-
-<script setup>
-import QrcodeVue from 'qrcode.vue'
-</script>
 
 <style>
 .cover-wrap {
