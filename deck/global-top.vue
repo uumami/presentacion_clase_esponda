@@ -76,21 +76,35 @@ let spriteTimer = null
 // ========================================
 const tickerItems = [
   'uumami',
+  'ヽ(°◇° )ノ',
   'present time. present day.',
+  '◢◣ ◥◤',
   'beat entropy',
+  '━━━━━▶',
   'wired',
+  '( ͡° ͜ʖ ͡°)',
   'longevity via omics',
+  '▒▒▓▓▓▓▒▒',
   'p vs np (someday)',
+  'ʕ•ᴥ•ʔ',
   'itam · dacc',
+  '┗(▔, ▔ )┛',
   'nakamas > enemies',
+  '(づ｡◕‿‿◕｡)づ',
   'frieren says hi',
+  '╱╲╱╲╱╲',
   'vinlandia online',
+  '◉_◉',
   'mhar on gpu',
+  'ᕦ(ò_óˇ)ᕤ',
   'lain loves you',
+  '▲▼▲▼▲',
   'at field stable',
+  '|ω•´)',
   'host online',
+  '(¬‿¬)',
   '2026',
-  'data is the new oil. uumami is the new refinery.',
+  '¯\\_(ツ)_/¯',
   'no truisms, just what i think',
 ]
 const tickerLoop = [...tickerItems, ...tickerItems] // duplicate for seamless loop
@@ -100,20 +114,35 @@ const tickerLoop = [...tickerItems, ...tickerItems] // duplicate for seamless lo
 // ========================================
 const topItems = [
   '[ok] wired mesh online',
+  '━━━━━━▶',
   '[ok] crt phosphor stable',
+  '[▓▓▓▓▓▓▓▓░░] 80%',
   '[ok] nakamas mounted',
-  '[ok] entropy counter --',
+  '◢◣  ◥◤',
+  '[..] entropy counter --',
+  '[▓▓▓▓▓░░░░░] 50%',
   '[ok] at field: contained',
+  'ʕ•ᴥ•ʔ',
   '[..] decoding specia',
+  '▒▒▓▓▓▓▒▒',
   '[ok] omics stream live',
+  '(>‿◠)✌',
   '[ok] rune cache warm',
+  '╔═══╗ ╚═══╝',
   '[ok] present.day loaded',
+  '[▓▓▓▓▓▓▓▓▓▓] 100%',
   '[..] beat entropy 98.7%',
+  '|ｴ|',
   '[ok] lain.service active',
+  '╍╍╍●╍╍╍',
   '[ok] host: uumami',
+  '◉_◉',
   '[ok] tz: america/mexico_city',
+  '▲▼▲▼▲',
   '[..] consciousness sync 34%',
+  '[▓▓▓░░░░░░░] 34%',
   '[ok] longevity daemon up',
+  '(¬‿¬)',
 ]
 const topLoop = [...topItems, ...topItems]
 
@@ -262,7 +291,7 @@ onUnmounted(() => {
   animation: tickerScroll 90s linear infinite;
 }
 .ticker.top .ticker-track.reverse {
-  animation: tickerScrollReverse 70s linear infinite;
+  animation: tickerScrollReverse 180s linear infinite;
 }
 .ticker-track .item {
   display: inline-flex; align-items: center; gap: 0.5rem;
