@@ -1,18 +1,26 @@
 <template>
   <div class="global-ui">
-    <!-- top-right: live session clock -->
-    <div class="session">
-      <span class="dot-live"></span>
-      <span class="label">wired</span>
-      <span class="sep">//</span>
-      <span class="time">{{ clock }}</span>
+    <!-- top: boot-log style ticker (left-to-right, cyan) + session clock -->
+    <div class="ticker top">
+      <div class="ticker-track reverse">
+        <span v-for="(t, i) in topLoop" :key="i" class="item">
+          <span class="txt">{{ t }}</span>
+          <span class="sep">//</span>
+        </span>
+      </div>
+      <div class="session-inline">
+        <span class="dot-live"></span>
+        <span>wired</span>
+        <span class="sep">//</span>
+        <span class="time">{{ clock }}</span>
+      </div>
     </div>
 
     <!-- bottom-right: ASCII sprite cycling -->
     <div class="sprite">{{ currentSprite }}</div>
 
-    <!-- bottom: scrolling ticker -->
-    <div class="ticker">
+    <!-- bottom: scrolling ticker (right-to-left, green) -->
+    <div class="ticker bottom">
       <div class="ticker-track">
         <span v-for="(t, i) in tickerLoop" :key="i" class="item">
           <span class="txt">{{ t }}</span>
@@ -88,6 +96,28 @@ const tickerItems = [
 const tickerLoop = [...tickerItems, ...tickerItems] // duplicate for seamless loop
 
 // ========================================
+// top ticker: boot-log style
+// ========================================
+const topItems = [
+  '[ok] wired mesh online',
+  '[ok] crt phosphor stable',
+  '[ok] nakamas mounted',
+  '[ok] entropy counter --',
+  '[ok] at field: contained',
+  '[..] decoding specia',
+  '[ok] omics stream live',
+  '[ok] rune cache warm',
+  '[ok] present.day loaded',
+  '[..] beat entropy 98.7%',
+  '[ok] lain.service active',
+  '[ok] host: uumami',
+  '[ok] tz: america/mexico_city',
+  '[..] consciousness sync 34%',
+  '[ok] longevity daemon up',
+]
+const topLoop = [...topItems, ...topItems]
+
+// ========================================
 // ambient glyphs
 // ========================================
 const glyphChars = '人線繋鏡夢永無心時空#∞◊◈◉◎ンル'.split('')
@@ -161,29 +191,33 @@ onUnmounted(() => {
   font-family: 'IBM Plex Mono', ui-monospace, monospace;
 }
 
-/* ==== session clock top-right ==== */
-.session {
+/* ==== session clock inline in top ticker ==== */
+.session-inline {
   position: absolute;
-  top: 0.7rem; right: 0.9rem;
-  font-size: 0.7rem;
-  color: #7fffb5;
+  top: 0; right: 0;
+  height: 100%;
+  padding: 0 0.9rem;
   display: flex; align-items: center; gap: 0.45rem;
+  font-size: 0.7rem;
+  color: #2ef5ff;
   letter-spacing: 0.1em;
-  opacity: 0.82;
   text-transform: uppercase;
-  mix-blend-mode: screen;
+  background: rgba(11, 15, 13, 0.75);
+  border-left: 1px solid rgba(46, 245, 255, 0.25);
+  z-index: 2;
+  opacity: 0.95;
 }
 .dot-live {
   width: 6px; height: 6px; border-radius: 999px;
-  background: #7fffb5;
-  box-shadow: 0 0 10px #7fffb5;
+  background: #2ef5ff;
+  box-shadow: 0 0 10px #2ef5ff;
   animation: pulse 1.4s ease-in-out infinite;
 }
 @keyframes pulse {
   0%, 100% { opacity: 1; transform: scale(1); }
   50% { opacity: 0.35; transform: scale(0.7); }
 }
-.session .sep { opacity: 0.35; }
+.session-inline .sep { opacity: 0.35; }
 
 /* ==== ASCII sprite bottom-right ==== */
 .sprite {
@@ -203,34 +237,51 @@ onUnmounted(() => {
   50% { opacity: 0.92; transform: translateY(-1px); }
 }
 
-/* ==== bottom ticker ==== */
+/* ==== tickers (top + bottom) ==== */
 .ticker {
   position: absolute;
-  bottom: 0; left: 0; right: 0;
+  left: 0; right: 0;
   height: 1.3rem;
   overflow: hidden;
-  background: rgba(11, 15, 13, 0.55);
+  background: rgba(11, 15, 13, 0.6);
+}
+.ticker.top {
+  top: 0;
+  border-bottom: 1px solid rgba(46, 245, 255, 0.2);
+}
+.ticker.bottom {
+  bottom: 0;
   border-top: 1px solid rgba(127, 255, 181, 0.18);
 }
 .ticker-track {
   display: inline-flex;
   white-space: nowrap;
-  animation: tickerScroll 90s linear infinite;
   will-change: transform;
+}
+.ticker.bottom .ticker-track {
+  animation: tickerScroll 90s linear infinite;
+}
+.ticker.top .ticker-track.reverse {
+  animation: tickerScrollReverse 70s linear infinite;
 }
 .ticker-track .item {
   display: inline-flex; align-items: center; gap: 0.5rem;
   padding: 0 0.9rem;
   font-size: 0.72rem;
-  color: #7fffb5;
-  opacity: 0.72;
   letter-spacing: 0.08em;
   line-height: 1.3rem;
 }
-.ticker-track .item .sep { opacity: 0.35; color: #2ef5ff; }
+.ticker.bottom .item { color: #7fffb5; opacity: 0.72; }
+.ticker.bottom .item .sep { opacity: 0.35; color: #2ef5ff; }
+.ticker.top .item { color: #2ef5ff; opacity: 0.7; font-weight: 500; }
+.ticker.top .item .sep { opacity: 0.35; color: #7fffb5; }
 @keyframes tickerScroll {
   0% { transform: translateX(0); }
   100% { transform: translateX(-50%); }
+}
+@keyframes tickerScrollReverse {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
 }
 
 /* ==== ambient drifting glyphs ==== */
