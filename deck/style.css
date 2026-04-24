@@ -34,12 +34,12 @@
   --eva-amber:    #f7b500;
   --eva-ink:      #f6e9e3;
 
-  /* frieren */
-  --frieren-bg:   #eef1f5;
-  --frieren-fg:   #5a6b8a;
-  --frieren-sil:  #c9d4e0;
-  --frieren-gold: #c9a159;
-  --frieren-ink:  #1a2030;
+  /* frieren (variante oscura) */
+  --frieren-bg:   #0d1420;
+  --frieren-fg:   #a5b3cf;
+  --frieren-sil:  #1f2a40;
+  --frieren-gold: #d4af6b;
+  --frieren-ink:  #e8ecf4;
 
   /* vinland */
   --vinland-bg:   #14100c;
@@ -92,21 +92,21 @@
 }
 
 .slidev-layout h1 {
-  font-size: 3.2rem;
+  font-size: 3.8rem;
   line-height: 1.05;
-  margin: 0 0 1.25rem 0;
-  max-width: 90%;
+  margin: 0 0 1.35rem 0;
+  max-width: 95%;
 }
 
 .slidev-layout h2 {
-  font-size: 1.8rem;
-  opacity: 0.8;
+  font-size: 2.1rem;
+  opacity: 0.82;
   font-weight: 300;
 }
 
 .slidev-layout h3 {
-  font-size: 1.3rem;
-  opacity: 0.8;
+  font-size: 1.5rem;
+  opacity: 0.82;
 }
 
 .slidev-layout code,
@@ -116,9 +116,16 @@
 
 .slidev-layout p,
 .slidev-layout li {
-  font-size: 1.05rem;
-  line-height: 1.5;
+  font-size: 1.25rem;
+  line-height: 1.55;
   font-weight: 300;
+}
+
+.slidev-layout .kv {
+  font-size: 1.1rem;
+}
+.slidev-layout .kv > div {
+  padding: 0.15rem 0;
 }
 
 /* slashes / meta line */
@@ -151,11 +158,13 @@
   color: var(--frieren-ink);
 }
 .slidev-layout.theme-frieren h1 {
-  color: var(--frieren-ink);
+  color: var(--frieren-gold);
   font-family: var(--font-display);
   font-weight: 500;
+  text-shadow: 0 0 25px rgba(212, 175, 107, 0.25);
 }
 .slidev-layout.theme-frieren h2 { color: var(--frieren-fg); }
+.slidev-layout.theme-frieren .kv .k { color: var(--frieren-gold); }
 
 .slidev-layout.theme-vinland {
   background: var(--vinland-bg);
@@ -185,7 +194,7 @@
    (aplican gradient overlays sobre la paleta)
    ============================================================ */
 
-.slidev-layout.layer-vaporwave::before {
+.slidev-layout.layer-vaporwave::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -195,7 +204,7 @@
     linear-gradient(180deg, transparent 0%, transparent 70%, rgba(255,46,195,0.10) 90%, rgba(46,245,255,0.08) 100%),
     linear-gradient(0deg, rgba(166,77,255,0.04), transparent 50%);
 }
-.slidev-layout.layer-cyberpunk::before {
+.slidev-layout.layer-cyberpunk::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -205,7 +214,7 @@
     radial-gradient(ellipse at 20% 110%, rgba(0,229,255,0.10), transparent 60%),
     radial-gradient(ellipse at 90% 0%, rgba(255,0,68,0.06), transparent 50%);
 }
-.slidev-layout.layer-solarpunk::before {
+.slidev-layout.layer-solarpunk::after {
   content: '';
   position: absolute;
   inset: 0;
@@ -215,7 +224,6 @@
     radial-gradient(ellipse at 80% 100%, rgba(106,176,76,0.10), transparent 60%),
     radial-gradient(ellipse at 15% 20%, rgba(247,181,0,0.06), transparent 55%);
 }
-.slidev-layout > * { position: relative; z-index: 1; }
 
 /* ============================================================
    avatar — esquina inferior derecha
