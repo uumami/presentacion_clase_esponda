@@ -34,13 +34,31 @@ canvasWidth: 1280
     <span class="u">u</span><span class="u">u</span><span class="u">m</span><span class="u">a</span><span class="u">m</span><span class="u">i</span><span class="cursor">▊</span>
   </div>
   <div class="sub"><Slashes :items="['present time', 'present day']" /></div>
+
+  <div class="qr-cover">
+    <QrcodeVue
+      value="https://uumami.wiki/presentacion_clase_esponda/"
+      :size="180"
+      level="H"
+      background="#0b0f0d"
+      foreground="#7fffb5"
+    />
+    <div class="qr-cover-label">
+      <span class="arrow">↑</span>
+      <span>scan · síguela en tu teléfono</span>
+    </div>
+  </div>
+
   <div class="glyph tl">人</div>
   <div class="glyph tr">線</div>
   <div class="glyph bl">繋</div>
-  <div class="glyph br">net</div>
   <div class="scan"></div>
   <div class="vignette"></div>
 </div>
+
+<script setup>
+import QrcodeVue from 'qrcode.vue'
+</script>
 
 <style>
 .cover-wrap {
@@ -153,10 +171,42 @@ canvasWidth: 1280
   font-size: 1.3rem;
   letter-spacing: 0.1em;
 }
-.glyph.tl { top: 1.5rem; right: 2.5rem; }
-.glyph.tr { top: 40%; right: 2.5rem; font-size: 2.2rem; opacity: 0.18; }
-.glyph.bl { bottom: 2rem; left: 2.5rem; font-size: 1.1rem; opacity: 0.6; }
-.glyph.br { bottom: 2rem; right: 2.5rem; font-size: 0.8rem; opacity: 0.5; letter-spacing: 0.3em; }
+.glyph.tl { top: 2.5rem; right: 2.5rem; }
+.glyph.tr { top: 40%; left: 3rem; font-size: 2.2rem; opacity: 0.18; }
+.glyph.bl { bottom: 3rem; left: 2.5rem; font-size: 1.1rem; opacity: 0.6; }
+.qr-cover {
+  position: absolute;
+  bottom: 2.5rem;
+  right: 2.5rem;
+  z-index: 8;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.55rem;
+  padding: 0.7rem;
+  background: rgba(11, 15, 13, 0.85);
+  border: 1px solid rgba(127, 255, 181, 0.35);
+  border-radius: 6px;
+  box-shadow: 0 0 30px rgba(127, 255, 181, 0.15);
+}
+.qr-cover-label {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: var(--lain-fg);
+  opacity: 0.85;
+  letter-spacing: 0.08em;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.qr-cover-label .arrow {
+  font-size: 1rem;
+  animation: bounceUp 1.2s ease-in-out infinite;
+}
+@keyframes bounceUp {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-4px); }
+}
 .scan {
   position: absolute; inset: 0; z-index: 9; pointer-events: none;
   background: repeating-linear-gradient(
@@ -1285,24 +1335,14 @@ class: 'theme-lain layer-cyberpunk'
     <div class="row mt-4"><span class="k">esta presentación</span> <a href="https://uumami.wiki/presentacion_clase_esponda/" target="_blank">uumami.wiki/presentacion_clase_esponda</a></div>
   </div>
   <div class="qr-wrap">
-    <QrcodeVue
-      value="https://uumami.wiki/presentacion_clase_esponda/"
-      :size="240"
-      level="H"
-      background="#0b0f0d"
-      foreground="#7fffb5"
-    />
-    <div class="qr-caption">escanea y ábrelo</div>
+    <img src="/img/qr_end.jpeg" alt="qr" class="qr-img" />
+    <div class="qr-caption">escanea</div>
   </div>
 </div>
 
 <div class="end mt-10">
   <Slashes :items="['preguntas', 'lo que sea']" />
 </div>
-
-<script setup>
-import QrcodeVue from 'qrcode.vue'
-</script>
 
 <style>
 .ct-grid {
@@ -1334,12 +1374,19 @@ import QrcodeVue from 'qrcode.vue'
   padding: 0.7rem;
   border: 1px solid rgba(127, 255, 181, 0.25);
   border-radius: 6px;
-  background: rgba(11, 15, 13, 0.6);
+  background: rgba(232, 255, 243, 0.96);
+}
+.qr-img {
+  width: 240px;
+  height: 240px;
+  object-fit: contain;
+  display: block;
 }
 .qr-caption {
   font-family: var(--font-mono);
   font-size: 0.75rem;
-  opacity: 0.7;
+  color: var(--lain-bg);
+  opacity: 0.75;
   letter-spacing: 0.1em;
 }
 .end {

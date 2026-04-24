@@ -145,6 +145,8 @@ celerybeat.pid
 # source material (personal)
 *.pdf
 !deck/public/**/*.pdf
+WhatsApp*.jpeg
+WhatsApp*.jpg
 .venv
 env/
 venv/
