@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<title>redirecting…</title>
+<script>
+  // GitHub Pages SPA fallback — redirect any missing path to the deck root
+  var seg = location.pathname.split('/').filter(Boolean);
+  var base = seg.length > 0 ? '/' + seg[0] + '/' : '/';
+  location.replace(base);
+</script>
+</head>
+<body></body>
+</html>

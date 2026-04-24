@@ -12,6 +12,7 @@ fonts:
   serif: 'Cinzel'
 transition: fade
 mdc: true
+routerMode: hash
 drawings:
   enabled: true
   persist: false
