@@ -674,14 +674,14 @@ class: 'theme-elden layer-solarpunk'
 </style>
 
 ---
-layout: image-right
-image: /img/chatbots.png
+layout: default
 class: 'theme-lain layer-cyberpunk'
 ---
 
 # chatbots
 
-voz y texto, conversacional.
+<div class="chatbots-grid">
+  <div class="chatbots-left">
 
 <div class="arch">
   <div class="step"><span class="n">01</span> asr · speech → text</div>
@@ -692,77 +692,125 @@ voz y texto, conversacional.
   <div class="step"><span class="n">06</span> tts · text → speech</div>
 </div>
 
-<div class="mt-4 kv">
-  <div><span class="k">vivos en prod</span> suggestic · amanda · cura · suvi</div>
+<div class="mt-3 kv">
+  <div><span class="k">prod</span> suggestic · <a href="https://nuco.ai/hcp" target="_blank">amanda</a> · cura · suvi</div>
+</div>
+
+  </div>
+  <div class="chatbots-right">
+    <ChatbotMini />
+  </div>
 </div>
 
 <style>
+.chatbots-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  align-items: start;
+}
 .arch {
-  margin-top: 0.8rem;
   display: flex;
   flex-direction: column;
-  gap: 0.35rem;
+  gap: 0.3rem;
   font-family: var(--font-mono);
-  font-size: 0.95rem;
+  font-size: 0.9rem;
 }
 .arch .step {
   display: flex;
-  gap: 0.8rem;
-  padding: 0.3rem 0;
+  gap: 0.7rem;
+  padding: 0.25rem 0;
   border-bottom: 1px dashed rgba(127, 255, 181, 0.18);
 }
 .arch .n {
   color: var(--lain-fg);
-  min-width: 1.8rem;
+  min-width: 1.6rem;
   font-weight: 500;
 }
 </style>
 
 ---
-layout: image-right
-image: /img/rag.png
+layout: default
 class: 'theme-lain layer-cyberpunk'
 ---
 
 # rag
 
+<div class="rag-grid">
+  <div class="rag-left">
+
 retrieval augmented generation.
 
-<div class="arch">
-  <div class="step"><span class="n">01</span> chunkear · splitting inteligente</div>
-  <div class="step"><span class="n">02</span> embeddings · vector por chunk</div>
+<div class="arch mt-3">
+  <div class="step"><span class="n">01</span> chunkear</div>
+  <div class="step"><span class="n">02</span> embeddings</div>
   <div class="step"><span class="n">03</span> vector store · faiss · qdrant · pgvector</div>
-  <div class="step"><span class="n">04</span> query → top-k similitud coseno</div>
-  <div class="step"><span class="n">05</span> rerank · cross-encoder</div>
-  <div class="step"><span class="n">06</span> contexto → llm → respuesta citada</div>
+  <div class="step"><span class="n">04</span> top-k · similitud coseno / jaccard</div>
+  <div class="step"><span class="n">05</span> rerank</div>
+  <div class="step"><span class="n">06</span> contexto → llm</div>
 </div>
 
-<div class="mt-4 note">
-  el llm no sabe lo que tú sabes. rag le da los documentos correctos
-  en el momento correcto. evita alucinaciones si se hace bien.
+<div class="mt-3 note">
+  el llm no sabe lo que tú sabes. rag le da los docs correctos.
+  evita alucinaciones si se hace bien.
 </div>
+
+  </div>
+  <div class="rag-right">
+    <RagRetrieval />
+  </div>
+</div>
+
+<style>
+.rag-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.4fr;
+  gap: 1.5rem;
+  margin-top: 0.4rem;
+  align-items: start;
+}
+</style>
 
 ---
-layout: image-right
-image: /img/agentic.png
+layout: default
 class: 'theme-eva layer-cyberpunk'
 ---
 
 # agentic engineering
 
+<div class="agent-grid">
+  <div class="agent-left">
+
 agentes que deciden, no sólo responden.
 
-<div class="kv mt-4">
+<div class="kv mt-3">
   <div><span class="k">tool use</span> el modelo llama funciones</div>
-  <div><span class="k">loops</span> plan → ejecutar → observar → repetir</div>
-  <div><span class="k">harness</span> framework que orquesta el loop</div>
-  <div><span class="k">control flow</span> quién decide qué y cuándo</div>
+  <div><span class="k">loops</span> plan → act → observe → repeat</div>
+  <div><span class="k">harness</span> orquestador del loop</div>
+  <div><span class="k">control flow</span> quién decide y cuándo</div>
 </div>
 
-<div class="mt-6 note">
+<div class="mt-3 note">
   un chatbot responde. un agente actúa. la diferencia es quién tiene
   las llaves del auto.
 </div>
+
+  </div>
+  <div class="agent-right">
+    <AgentLoop />
+  </div>
+</div>
+
+<style>
+.agent-grid {
+  display: grid;
+  grid-template-columns: 0.8fr 1.5fr;
+  gap: 1.5rem;
+  margin-top: 0.4rem;
+  align-items: start;
+}
+</style>
 
 ---
 layout: image-right
