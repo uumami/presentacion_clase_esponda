@@ -107,8 +107,8 @@ class: 'theme-frieren layer-solarpunk'
 <div class="kv mt-6">
   <div><span class="k">itam</span> · departamento académico de computación</div>
   <div><span class="k">desde</span> otoño 2025 · tiempo completo</div>
-  <div><span class="k">handle</span> uumami · sonder.art</div>
-  <div><span class="k">wiki</span> uumami.wiki</div>
+  <div><span class="k">handle</span> uumami · <a href="https://sonder.art" target="_blank">sonder.art</a></div>
+  <div><span class="k">wiki</span> <a href="https://uumami.wiki" target="_blank">uumami.wiki</a></div>
 </div>
 
 ---
@@ -239,7 +239,7 @@ class: 'theme-vinland layer-solarpunk'
   </div>
   <div class="row">
     <span class="y">2021</span>
-    <span class="e">paper mhar · arxiv 2104.07097</span>
+    <span class="e">paper mhar · <a href="https://arxiv.org/abs/2104.07097" target="_blank">arxiv 2104.07097</a></span>
   </div>
   <div class="row">
     <span class="y">2021–2023</span>
@@ -247,7 +247,7 @@ class: 'theme-vinland layer-solarpunk'
   </div>
   <div class="row">
     <span class="y">2023</span>
-    <span class="e">mhar publicado · springer computational statistics</span>
+    <span class="e">mhar publicado · <a href="https://link.springer.com/article/10.1007/s00180-023-01411-y" target="_blank">springer computational statistics</a></span>
   </div>
   <div class="row">
     <span class="y">2023–2024</span>
@@ -348,12 +348,12 @@ class: 'theme-lain layer-vaporwave'
 # startups
 
 <div class="companies">
-  <div class="co"><span class="dot"></span> <b>suggestic</b> · data architect lead · chatbots, voz, food-lens</div>
+  <div class="co"><span class="dot"></span> <b><a href="https://suggestic.com" target="_blank">suggestic</a></b> · data architect lead · chatbots, voz, food-lens</div>
   <div class="co"><span class="dot"></span> <b>cura</b> · cto + cso · hult prize 2026 ganador</div>
   <div class="co"><span class="dot"></span> <b>data dream solutions</b> · cdo · supply chain optimization e2e</div>
-  <div class="co"><span class="dot"></span> <b>onfire health</b> · founding team lead · advisor · backend+cloud+ia</div>
-  <div class="co"><span class="dot"></span> <b>superbio.ai</b> · ai researcher / po · founding · ~50 apps bio-ml · seed 750k</div>
-  <div class="co"><span class="dot"></span> <b>aleph</b> · data scientist · detección robo vehículos vía gps</div>
+  <div class="co"><span class="dot"></span> <b><a href="https://onfirehealth.ai" target="_blank">onfire health</a></b> · founding team lead · advisor · backend+cloud+ia</div>
+  <div class="co"><span class="dot"></span> <b><a href="https://superbio.ai" target="_blank">superbio.ai</a></b> · ai researcher / po · founding · ~50 apps bio-ml · seed 750k</div>
+  <div class="co"><span class="dot"></span> <b><a href="https://aleph.app" target="_blank">aleph</a></b> · data scientist · detección robo vehículos vía gps</div>
   <div class="co"><span class="dot"></span> <b>abraxas</b> · lead ds · pricing cinépolis · forecast bimbo</div>
   <div class="co"><span class="dot"></span> <b>amaru</b> · co-founder / ex-cto · edtech · top 20 alibaba global</div>
   <div class="co"><span class="dot"></span> <b>waltem</b> · ds independiente · forecast naicm</div>
@@ -475,9 +475,9 @@ usando matriz × matriz en lugar de vector × vector.
 resultado: gpu. rápido. el más rápido, hasta donde sé.
 
 <div class="kv mt-6">
-  <div><span class="k">arxiv</span> 2104.07097</div>
-  <div><span class="k">springer</span> computational statistics 2023</div>
-  <div><span class="k">pypi</span> mhar</div>
+  <div><span class="k">arxiv</span> <a href="https://arxiv.org/abs/2104.07097" target="_blank">2104.07097</a></div>
+  <div><span class="k">springer</span> <a href="https://link.springer.com/article/10.1007/s00180-023-01411-y" target="_blank">computational statistics 2023</a></div>
+  <div><span class="k">pypi</span> <a href="https://pypi.org/project/mhar" target="_blank">mhar</a></div>
 </div>
 
   </div>
@@ -508,11 +508,11 @@ class: 'theme-eva layer-solarpunk'
 <div class="papers">
   <div class="p">
     <div class="pt">mhar</div>
-    <div class="pd">sampleador gpu · arxiv 2104.07097 · springer 2023</div>
+    <div class="pd">sampleador gpu · <a href="https://arxiv.org/abs/2104.07097" target="_blank">arxiv 2104.07097</a> · <a href="https://link.springer.com/article/10.1007/s00180-023-01411-y" target="_blank">springer 2023</a></div>
   </div>
   <div class="p">
     <div class="pt">minimal compromise</div>
-    <div class="pd">teoría de elección · arxiv 2010.08771 · sen's β sin α</div>
+    <div class="pd">teoría de elección · <a href="https://arxiv.org/abs/2010.08771" target="_blank">arxiv 2010.08771</a> · sen's β sin α</div>
   </div>
   <div class="p">
     <div class="pt">classroom assignment</div>
@@ -621,14 +621,14 @@ class: 'theme-elden layer-solarpunk'
   <figure>
     <img src="/img/10a_maira.png" />
     <figcaption>
-      <b>maira</b>
+      <b><a href="https://malnutrition-face-scanner.vercel.app/" target="_blank">maira</a></b>
       <span>detección de malnutrición por foto · patente en trámite</span>
     </figcaption>
   </figure>
   <figure>
     <img src="/img/10b_amanda.png" />
     <figcaption>
-      <b>amanda</b>
+      <b><a href="https://nuco.ai/hcp" target="_blank">amanda</a></b>
       <span>chatbot para pacientes con alimentación por sonda</span>
     </figcaption>
   </figure>
@@ -798,11 +798,11 @@ lo que hago cuando nadie me paga.
 <div class="vibe-grid">
   <figure>
     <img src="/img/11a_lain_shell.png" />
-    <figcaption><b>lain-shell</b><span>shell en rust · present day</span></figcaption>
+    <figcaption><b><a href="https://github.com/uumami/lain-shell" target="_blank">lain-shell</a></b><span>shell en rust · present day</span></figcaption>
   </figure>
   <figure>
     <img src="/img/11b_raya_lucaria.png" />
-    <figcaption><b>raya lucaria</b><span>plataforma de cursos · glintstone engine</span></figcaption>
+    <figcaption><b><a href="https://uumami.wiki/raya_lucaria/" target="_blank">raya lucaria</a></b><span>plataforma de cursos · glintstone engine</span></figcaption>
   </figure>
   <figure>
     <img src="/img/11c_tycoon_points.png" />
@@ -866,7 +866,7 @@ plataforma de cursos con grafo interactivo de conocimiento.
   <div><span class="k">engine</span> glintstone · 11ty + tailwind + docker</div>
   <div><span class="k">features</span> grafo force/jerarquía/circular · search · katex · mermaid</div>
   <div><span class="k">uso</span> mis cursos de itam + otros profes</div>
-  <div><span class="k">live</span> uumami.wiki/raya_lucaria/grafo/</div>
+  <div><span class="k">live</span> <a href="https://uumami.wiki/raya_lucaria/grafo/" target="_blank">uumami.wiki/raya_lucaria/grafo/</a></div>
 </div>
 
   </div>
@@ -1154,11 +1154,11 @@ class: 'theme-lain layer-cyberpunk'
 
 <div class="ct-grid">
   <div class="contact">
-    <div class="row"><span class="k">wiki</span> uumami.wiki</div>
-    <div class="row"><span class="k">github</span> github.com/uumami</div>
-    <div class="row"><span class="k">email</span> uumami@sonder.art</div>
-    <div class="row"><span class="k">itam</span> mario.vazquez.corte@itam.mx</div>
-    <div class="row mt-4"><span class="k">esta presentación</span> uumami.wiki/presentacion_clase_esponda</div>
+    <div class="row"><span class="k">wiki</span> <a href="https://uumami.wiki" target="_blank">uumami.wiki</a></div>
+    <div class="row"><span class="k">github</span> <a href="https://github.com/uumami" target="_blank">github.com/uumami</a></div>
+    <div class="row"><span class="k">email</span> <a href="mailto:uumami@sonder.art">uumami@sonder.art</a></div>
+    <div class="row"><span class="k">itam</span> <a href="mailto:mario.vazquez.corte@itam.mx">mario.vazquez.corte@itam.mx</a></div>
+    <div class="row mt-4"><span class="k">esta presentación</span> <a href="https://uumami.wiki/presentacion_clase_esponda/" target="_blank">uumami.wiki/presentacion_clase_esponda</a></div>
   </div>
   <div class="qr-wrap">
     <QrcodeVue

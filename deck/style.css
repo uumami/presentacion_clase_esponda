@@ -303,3 +303,24 @@
 ::selection { background: var(--lain-fg); color: var(--lain-bg); }
 .theme-eva ::selection { background: var(--eva-fg); color: var(--eva-bg); }
 .theme-elden ::selection { background: var(--elden-fg); color: var(--elden-bg); }
+
+/* ============================================================
+   links clickeables, color por tema
+   ============================================================ */
+.slidev-layout a {
+  color: inherit;
+  text-decoration: none;
+  border-bottom: 1px dashed currentColor;
+  opacity: 0.95;
+  transition: opacity 0.15s, border-color 0.15s;
+  padding-bottom: 1px;
+}
+.slidev-layout a:hover {
+  opacity: 1;
+  border-bottom-style: solid;
+}
+.slidev-layout.theme-lain a       { color: var(--lain-fg); }
+.slidev-layout.theme-eva a        { color: var(--eva-amber); }
+.slidev-layout.theme-frieren a    { color: var(--frieren-gold); }
+.slidev-layout.theme-vinland a    { color: var(--vinland-red); }
+.slidev-layout.theme-elden a      { color: var(--elden-fg); }
