@@ -738,10 +738,6 @@ packages:
   '@shikijs/core@1.29.2':
     resolution: {integrity: sha512-vju0lY9r27jJfOY4Z7+Rt/nIOjzJpZ3y+nYpqtUZInVoXQ/TJZcfGnNOGnKjFdVZb8qexiCuSlZRKcGfhhTTZQ==}
 
-  '@shikijs/core@4.0.2':
-    resolution: {integrity: sha512-hxT0YF4ExEqB8G/qFdtJvpmHXBYJ2lWW7qTHDarVkIudPFE6iCIrqdgWxGn5s+ppkGXI0aEGlibI0PAyzP3zlw==}
-    engines: {node: '>=20'}
-
   '@shikijs/engine-javascript@1.29.2':
     resolution: {integrity: sha512-iNEZv4IrLYPv64Q6k7EPpOCE/nuvGiKl7zxdq0WFuRPF5PAE9PRo2JGq/d8crLusM59BRemJ4eOqrFrC4wiQ+A==}
 
@@ -757,28 +753,14 @@ packages:
   '@shikijs/monaco@1.29.2':
     resolution: {integrity: sha512-VLugI+Hit6rxBr+S//p3qz4EReuMfhSjBYpFtqkg3qvt6KG+MQIzIxuogznsWOcVabyeHN48n/e+Acn6TBxSFg==}
 
-  '@shikijs/primitive@4.0.2':
-    resolution: {integrity: sha512-M6UMPrSa3fN5ayeJwFVl9qWofl273wtK1VG8ySDZ1mQBfhCpdd8nEx7nPZ/tk7k+TYcpqBZzj/AnwxT9lO+HJw==}
-    engines: {node: '>=20'}
-
   '@shikijs/themes@1.29.2':
     resolution: {integrity: sha512-i9TNZlsq4uoyqSbluIcZkmPL9Bfi3djVxRnofUHwvx/h6SRW3cwgBC5SML7vsDcWyukY0eCzVN980rqP6qNl9g==}
 
   '@shikijs/twoslash@1.29.2':
     resolution: {integrity: sha512-2S04ppAEa477tiaLfGEn1QJWbZUmbk8UoPbAEw4PifsrxkBXtAtOflIZJNtuCwz8ptc/TPxy7CO7gW4Uoi6o/g==}
 
-  '@shikijs/twoslash@4.0.2':
-    resolution: {integrity: sha512-yHRudhirlMxOwDO6Q4OFU9hJMvUqNkY8hwtUfbaSEoG7A2cYicdO4c8fdDaDtyJ50HK7I8vTokrkIHTK3DCkLQ==}
-    engines: {node: '>=20'}
-    peerDependencies:
-      typescript: '>=5.5.0'
-
   '@shikijs/types@1.29.2':
     resolution: {integrity: sha512-VJjK0eIijTZf0QSTODEXCqinjBn0joAHQ+aPSBzrv4O2d/QSbsMw+ZeSRx03kV34Hy7NzUvV/7NqfYGRLrASmw==}
-
-  '@shikijs/types@4.0.2':
-    resolution: {integrity: sha512-qzbeRooUTPnLE+sHD/Z8DStmaDgnbbc/pMrU203950aRqjX/6AFHeDYT+j00y2lPdz0ywJKx7o/7qnqTivtlXg==}
-    engines: {node: '>=20'}
 
   '@shikijs/vitepress-twoslash@1.29.2':
     resolution: {integrity: sha512-KIwXZBqbKF0+9mLtV5IyiSBiflXm8vSGyCwFKVttpXRxpepMOcqqo1YGMW8Hd1qpt9XFqF/mRlihCSwHPXSh9A==}
@@ -2104,8 +2086,8 @@ packages:
   lie@3.3.0:
     resolution: {integrity: sha512-UaiMJzeWRlEujzAuw5LokY1L5ecNQYZKfmyZ9L7wDHb/p5etKaxXhohBcrw0EYby+G/NA52vRSN4N39dxHAIwQ==}
 
-  linkify-it@5.0.0:
-    resolution: {integrity: sha512-5aHCbzQRADcdP+ATqnDuhhJ/MRIqDkZX5pyjFHRRysS8vZ5AbqGEoFIb6pYHPZ+L/OC2Lc+xT8uHVVR5CAK/wQ==}
+  linkify-it@5.0.2:
+    resolution: {integrity: sha512-ONTm2jCMAVZjgQa/Fy1kScXsuOoF5NPTsoFBdE1KVIZ2vAh/r9+Bqo+0jINCBYnavTPQZz38QzFTme79ENoN3Q==}
 
   load-tsconfig@0.2.5:
     resolution: {integrity: sha512-IXO6OCs9yg8tMKzfPZ1YmheJbZCiEsnBdcB03l0OcfK9prKnJb96siuHCr5Fl37/yo9DnKU+TLpxzTUspw9shg==}
@@ -2154,8 +2136,8 @@ packages:
       '@types/markdown-it': '*'
       markdown-it: ^14.0.0
 
-  markdown-it@14.1.1:
-    resolution: {integrity: sha512-BuU2qnTti9YKgK5N+IeMubp14ZUKUUw7yeJbkjtosvHiP0AZ5c8IAgEMk79D0eC8F23r4Ac/q8cAIFdm2FtyoA==}
+  markdown-it@14.3.3:
+    resolution: {integrity: sha512-L//tDAkjTjJCU6pBUSBTgs3Kg4InVaZuUZog/b6V12UKhcDQ7S78877ibbCanRExwPuYP1CZD7Gd2dxSy1GXRg==}
     hasBin: true
 
   markdown-table@3.0.4:
@@ -2724,9 +2706,6 @@ packages:
   twoslash-protocol@0.2.12:
     resolution: {integrity: sha512-5qZLXVYfZ9ABdjqbvPc4RWMr7PrpPaaDSeaYY55vl/w1j6H6kzsWK/urAEIXlzYlyrFmyz1UbwIt+AA0ck+wbg==}
 
-  twoslash-protocol@0.3.8:
-    resolution: {integrity: sha512-HmvAHoiEviK8LqvAQyc9/irkdvwTUiR1fHmNwH/0gq8EHxyBt4PWVPixjEXg6wJu1u6yBrILEWXGK9Kw58/8yQ==}
-
   twoslash-vue@0.2.12:
     resolution: {integrity: sha512-kxH60DLn2QBcN2wjqxgMDkyRgmPXsytv7fJIlsyFMDPSkm1/lMrI/UMrNAshNaRHcI+hv8x3h/WBgcvlb2RNAQ==}
     peerDependencies:
@@ -2736,11 +2715,6 @@ packages:
     resolution: {integrity: sha512-tEHPASMqi7kqwfJbkk7hc/4EhlrKCSLcur+TcvYki3vhIfaRMXnXjaYFgXpoZRbT6GdprD4tGuVBEmTpUgLBsw==}
     peerDependencies:
       typescript: '*'
-
-  twoslash@0.3.8:
-    resolution: {integrity: sha512-OeDz0kDl8sqPUN3nr7gqcvOs70f5lZsdhKYTX3/SgB9OvdadzzoYJI/4SBXhXV1HG8E9fLc+e17itoRYTxmoig==}
-    peerDependencies:
-      typescript: ^5.5.0 || ^6.0.0
 
   typescript@5.6.3:
     resolution: {integrity: sha512-hjcS1mhfuyi4WW8IWtjP7brDrG2cuDZukyrYrSauoXGNgx0S7zceP07adYkJycEr56BOUTNPzbInooiN3fn1qw==}
@@ -3484,14 +3458,14 @@ snapshots:
   '@mdit-vue/plugin-component@2.1.4':
     dependencies:
       '@types/markdown-it': 14.1.2
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
 
   '@mdit-vue/plugin-frontmatter@2.1.4':
     dependencies:
       '@mdit-vue/types': 2.1.4
       '@types/markdown-it': 14.1.2
       gray-matter: 4.0.3
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
 
   '@mdit-vue/types@2.1.4': {}
 
@@ -3642,14 +3616,6 @@ snapshots:
       '@types/hast': 3.0.4
       hast-util-to-html: 9.0.5
 
-  '@shikijs/core@4.0.2':
-    dependencies:
-      '@shikijs/primitive': 4.0.2
-      '@shikijs/types': 4.0.2
-      '@shikijs/vscode-textmate': 10.0.2
-      '@types/hast': 3.0.4
-      hast-util-to-html: 9.0.5
-
   '@shikijs/engine-javascript@1.29.2':
     dependencies:
       '@shikijs/types': 1.29.2
@@ -3667,7 +3633,7 @@ snapshots:
 
   '@shikijs/markdown-it@1.29.2':
     dependencies:
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
       shiki: 1.29.2
 
   '@shikijs/monaco@1.29.2':
@@ -3675,12 +3641,6 @@ snapshots:
       '@shikijs/core': 1.29.2
       '@shikijs/types': 1.29.2
       '@shikijs/vscode-textmate': 10.0.2
-
-  '@shikijs/primitive@4.0.2':
-    dependencies:
-      '@shikijs/types': 4.0.2
-      '@shikijs/vscode-textmate': 10.0.2
-      '@types/hast': 3.0.4
 
   '@shikijs/themes@1.29.2':
     dependencies:
@@ -3695,28 +3655,14 @@ snapshots:
       - supports-color
       - typescript
 
-  '@shikijs/twoslash@4.0.2(typescript@5.6.3)':
-    dependencies:
-      '@shikijs/core': 4.0.2
-      '@shikijs/types': 4.0.2
-      twoslash: 0.3.8(typescript@5.6.3)
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
   '@shikijs/types@1.29.2':
-    dependencies:
-      '@shikijs/vscode-textmate': 10.0.2
-      '@types/hast': 3.0.4
-
-  '@shikijs/types@4.0.2':
     dependencies:
       '@shikijs/vscode-textmate': 10.0.2
       '@types/hast': 3.0.4
 
   '@shikijs/vitepress-twoslash@1.29.2(@nuxt/kit@3.21.2)(typescript@5.6.3)':
     dependencies:
-      '@shikijs/twoslash': 4.0.2(typescript@5.6.3)
+      '@shikijs/twoslash': 1.29.2(typescript@5.6.3)
       floating-vue: 5.2.2(@nuxt/kit@3.21.2)(vue@3.5.33(typescript@5.6.3))
       mdast-util-from-markdown: 2.0.3
       mdast-util-gfm: 3.1.0
@@ -3770,9 +3716,9 @@ snapshots:
       lz-string: 1.5.0
       magic-string: 0.30.21
       magic-string-stack: 0.1.2
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
       markdown-it-footnote: 4.0.0
-      markdown-it-mdc: 0.2.12(@types/markdown-it@14.1.2)(markdown-it@14.1.1)
+      markdown-it-mdc: 0.2.12(@types/markdown-it@14.1.2)(markdown-it@14.3.3)
       micromatch: 4.0.8
       mlly: 1.8.2
       monaco-editor: 0.51.0
@@ -5459,7 +5405,7 @@ snapshots:
     dependencies:
       immediate: 3.0.6
 
-  linkify-it@5.0.0:
+  linkify-it@5.0.2:
     dependencies:
       uc.micro: 2.1.0
 
@@ -5500,21 +5446,21 @@ snapshots:
   markdown-it-async@0.1.3:
     dependencies:
       '@types/markdown-it': 14.1.2
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
 
   markdown-it-footnote@4.0.0: {}
 
-  markdown-it-mdc@0.2.12(@types/markdown-it@14.1.2)(markdown-it@14.1.1):
+  markdown-it-mdc@0.2.12(@types/markdown-it@14.1.2)(markdown-it@14.3.3):
     dependencies:
       '@types/markdown-it': 14.1.2
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
       yaml: 2.8.3
 
-  markdown-it@14.1.1:
+  markdown-it@14.3.3:
     dependencies:
       argparse: 2.0.1
       entities: 4.5.0
-      linkify-it: 5.0.0
+      linkify-it: 5.0.2
       mdurl: 2.0.0
       punycode.js: 2.3.1
       uc.micro: 2.1.0
@@ -6235,8 +6181,6 @@ snapshots:
 
   twoslash-protocol@0.2.12: {}
 
-  twoslash-protocol@0.3.8: {}
-
   twoslash-vue@0.2.12(typescript@5.6.3):
     dependencies:
       '@vue/language-core': 2.1.10(typescript@5.6.3)
@@ -6250,14 +6194,6 @@ snapshots:
     dependencies:
       '@typescript/vfs': 1.6.4(typescript@5.6.3)
       twoslash-protocol: 0.2.12
-      typescript: 5.6.3
-    transitivePeerDependencies:
-      - supports-color
-
-  twoslash@0.3.8(typescript@5.6.3):
-    dependencies:
-      '@typescript/vfs': 1.6.4(typescript@5.6.3)
-      twoslash-protocol: 0.3.8
       typescript: 5.6.3
     transitivePeerDependencies:
       - supports-color
@@ -6388,7 +6324,7 @@ snapshots:
       '@mdit-vue/types': 2.1.4
       '@rollup/pluginutils': 5.3.0(rollup@4.60.2)
       '@types/markdown-it': 14.1.2
-      markdown-it: 14.1.1
+      markdown-it: 14.3.3
       markdown-it-async: 0.1.3
       unplugin: 2.3.11
       vite: 6.4.2(@types/node@18.19.130)(jiti@2.6.1)(tsx@4.21.0)(yaml@2.8.3)
